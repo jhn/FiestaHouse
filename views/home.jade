@@ -1,8 +1,13 @@
 extends layout
 
 block content
-  h1 Bootstrap starter template
+  h1 Fiesta House
+  img(src="../img/test2.jpg", width = 600, height = 300)
   p.lead
     | Use this document as a way to quickly start any new project.
     br
     | All you get is this text and a mostly barebones HTML document.
+
+  form.landingForm
+    input(type='text', name='address', value='Enter your address: ')
+    input(type='submit', value='Start')
