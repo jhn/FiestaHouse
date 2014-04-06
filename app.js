@@ -156,13 +156,17 @@ app.get('/planner/cleaning', passportConf.isAuthenticated, plannerController.get
 app.get('/checkout', passportConf.isAuthenticated, checkoutController.getCheckout);
 // app.post('/checkout', passportConf.isAuthenticated, plannerController.postCheckout);
 
+// 
+app.post('/deliverydotcom', homeController.callDeliveryDotCom);
+
 /**
  * OAuth routes for sign-in.
  */
 
+// TODO: change redirect route
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
-  res.redirect('/planner/details');
+  res.redirect('#details');
 });
 app.get('/auth/github', passport.authenticate('github'));
 app.get('/auth/github/callback', passport.authenticate('github', { failureRedirect: '/login' }), function(req, res) {
