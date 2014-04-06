@@ -1,5 +1,5 @@
 module.exports = {
-  db: process.env.MONGODB|| 'mongodb://localhost:27017/test',
+  db: process.env.MONGODB|| 'mongodb://fiesta:fiesta@oceanic.mongohq.com:10007/fiestahouse_dev',
 
   sessionSecret: process.env.SESSION_SECRET || 'Your Session Secret goes here',
 
