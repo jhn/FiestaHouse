@@ -19,6 +19,8 @@ var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
 var apiController = require('./controllers/api');
 var contactController = require('./controllers/contact');
+var plannerController = require('./controllers/planner');
+var checkoutController = require('./controllers/checkout');
 
 /**
  * API keys + Passport configuration.
@@ -139,6 +141,18 @@ app.get('/api/twitter', passportConf.isAuthenticated, passportConf.isAuthorized,
 app.get('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getVenmo);
 app.post('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.postVenmo);
 app.get('/api/linkedin', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getLinkedin);
+
+app.get('/planner/details', passportConf.isAuthenticated, plannerController.getDetails);
+// app.post('/planner/details', passportConf.isAuthenticated, plannerController.postDetails);
+app.post('/planner/details', plannerController.postDetails);
+app.get('/planner/food', passportConf.isAuthenticated, plannerController.getFood);
+// app.post('/planner/food', passportConf.isAuthenticated, plannerController.postFood);
+app.get('/planner/booze', passportConf.isAuthenticated, plannerController.getBooze);
+// app.post('/planner/booze', passportConf.isAuthenticated, plannerController.postBooze);
+app.get('/planner/cleaning', passportConf.isAuthenticated, plannerController.getCleaning);
+// app.post('/planner/cleaning', passportConf.isAuthenticated, plannerController.postCleaning);
+app.get('/checkout', passportConf.isAuthenticated, checkoutController.getCheckout);
+// app.post('/checkout', passportConf.isAuthenticated, plannerController.postCheckout);
 
 /**
  * OAuth routes for sign-in.

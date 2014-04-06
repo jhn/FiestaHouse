@@ -1,10 +1,12 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
 var crypto = require('crypto');
+var ObjectId = mongoose.Schema.ObjectId;
 
 var userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
   password: String,
+  party: ObjectId,
 
   facebook: String,
   twitter: String,
@@ -22,7 +24,8 @@ var userSchema = new mongoose.Schema({
   },
 
   resetPasswordToken: String,
-  resetPasswordExpires: Date
+  resetPasswordExpires: Date,
+
 });
 
 /**

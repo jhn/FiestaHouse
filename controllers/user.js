@@ -45,7 +45,7 @@ exports.postLogin = function(req, res, next) {
     req.logIn(user, function(err) {
       if (err) return next(err);
       req.flash('success', { msg: 'Success! You are logged in.' });
-      res.redirect(req.session.returnTo || '/');
+      res.redirect(req.session.returnTo || '/party');
     });
   })(req, res, next);
 };
@@ -93,7 +93,7 @@ exports.postSignup = function(req, res, next) {
 
   var user = new User({
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
   });
 
   user.save(function(err) {
