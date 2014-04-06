@@ -19,7 +19,7 @@ exports.getLogin = function(req, res) {
 };
 
 /**
- * POST /login
+ *  /login
  * Sign in using email and password.
  * @param email
  * @param password
