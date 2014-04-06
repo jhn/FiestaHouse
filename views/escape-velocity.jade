@@ -33,8 +33,10 @@ head
                  Logo 
               #logo
                 h1
-                 p Fiesta House
-                span.byline Get your party on
+                 p 
+                     font(size='1000') Fiesta House
+                span.byline 
+                    font(size='5')  Get your party on
               //
                  /Logo
               //
@@ -58,7 +60,8 @@ head
     //
        Intro Wrapper 
     #intro-wrapper.wrapper.wrapper-style1
-      .title Start Here
+      .title 
+          font(size='5') Details
       .container
         .row
           .12u
@@ -86,7 +89,8 @@ head
     //
        Main Wrapper 
     .wrapper.wrapper-style2
-      .title The Details
+      .title 
+          font(size='5') Food
       .container
         .row
           .12u
@@ -154,7 +158,8 @@ head
     //
        Highlights Wrapper 
     .wrapper.wrapper-style3
-      .title The Endorsements
+      .title 
+          font(size='5') Booze
       .container
         .row
           .12u
@@ -203,25 +208,27 @@ head
     //
        Footer Wrapper 
     #footer-wrapper.wrapper
-      .title We'll Even Clean Up After
+      .title 
+          font(size='5') Cleaning
       .container
         .row
           .12u
-            h1 Our cleaners are efficient and trustworthy. Would you like to use this service?            
-            form(action='')
-              input(type='checkbox', name='cleaningService', value='yes')
-              | Yes I would like the cleaning service
-              br
+            p
+                center 
+                    font(size='50') Cleaning Service?  
+                    
+         .row
+          .4u
+        ul.actions.actions-centered
+          a.button.button-style1.button-big(href='#') Yes 
+          white-space:pre         
+          a.button.button-style2.button-big(href='#') No
             //
                /Footer 
             //
-               Copyright 
-            #copyright
-              span
-                | © Untitled. Design by
-                a(href='http://html5up.net/') HTML5 UP
-                | .
+           
             //
                /Copyright 
     //
        /Footer Wrapper 
+
