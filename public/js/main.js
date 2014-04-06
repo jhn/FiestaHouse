@@ -6,18 +6,58 @@ $(document).ready(function() {
     // make call to delivery.com
     $.post("/deliverydotcom", $( "#deliveryForm" ).serialize(), function(data) {
       var payload = $.parseJSON(data);
+
+        var mydiv = document.createElement( "div" );
+        var elemToAttach = "";
+
+        $.each(payload, function(k, v) {
+          elemToAttach += "<section><h3 class='fa fa-check'>" + v.name + "</h3><p>" + v.description + " " + "$" + v.price+".</p></section>";
+        });
+        mydiv.innerHTML = elemToAttach;
+        $('#features .feature-list').append(mydiv);
+
+      // debugger;
+      // var allMerchants = payload.merchants;
+      // var random = Math.floor(getRandomArbitrary(0, allMerchants.length));
+      // var singleMerchant = allMerchants[random];
+      // var randomMenu;
+      // var itemPayload;
+      // $.post("/deliverydotcomitem", { id: singleMerchant.id, _csrf: getCSRFToken()}, function(items) {
+      //   itemPayload = $.parseJSON(items);
+      //   randomMenu = itemPayload.menu.map(function(elem) {
+      //     return elem.children;
+      //   }).sort(function(a, b) {
+      //     return b.length - a.length;
+      //   })[0];
+      //   debugger;
+      //   if (randomMenu.length > 6) {
+      //     randomMenu = randomMenu.slice(0, 6);
+      //   }
+      //   var mydiv = document.createElement( "div" );
+      //   var elemToAttach = "";
+      //   debugger;
+      //   $.each(randomMenu, function(k, v) {
+      //     elemToAttach += "<section><h3 class='fa fa-check'>" + v.name + "</h3><p>" + v.description + " " + "$" + v.price+".</p></section>";
+      //   });
+      //   mydiv.innerHTML = elemToAttach;
+      //   $('#features .feature-list').append(mydiv);
+      //   debugger;
+      // });
+    });
+
+  $('#foodProceed').click(function (e) {
+    // don't submit yet
+    // e.preventDefault();
+    $.post("/deliverydotcombooze", $( "#deliveryForm" ).serialize(), function(data) {
+      var payload = $.parseJSON(data);
       var allMerchants = payload.merchants;
       var random = Math.floor(getRandomArbitrary(0, allMerchants.length));
       var singleMerchant = allMerchants[random];
-      $.post("/deliverydotcomitem", { id: singleMerchant.id, _csrf: getCSRFToken()}, function(items) {
-        var itemPayload = $.parseJSON(items);
-      });
-      // $.each(some_merchants, function(k, v) {
-
-      // });
-      console.log(payload);
-
+      debugger;
+      var randomMenu;
+      var itemPayload;
     });
+  });
 
     $.post( "/planner/details", $( "#deliveryForm" ).serialize(), function(data) {
        console.log("success!");
