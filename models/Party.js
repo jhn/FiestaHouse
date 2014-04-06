@@ -6,7 +6,7 @@ var partySchema = new mongoose.Schema({
 
 	title: String,
 	address: String,
-	date: Date
+	date: { type: Date, default: Date.now }
 
 });
 

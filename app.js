@@ -144,8 +144,8 @@ app.post('/api/venmo', passportConf.isAuthenticated, passportConf.isAuthorized, 
 app.get('/api/linkedin', passportConf.isAuthenticated, passportConf.isAuthorized, apiController.getLinkedin);
 
 app.get('/planner/details', passportConf.isAuthenticated, plannerController.getDetails);
-// app.post('/planner/details', passportConf.isAuthenticated, plannerController.postDetails);
-app.post('/planner/details', plannerController.postDetails);
+app.post('/planner/details', passportConf.isAuthenticated, plannerController.postDetails);
+
 app.get('/planner/food', passportConf.isAuthenticated, plannerController.getFood);
 // app.post('/planner/food', passportConf.isAuthenticated, plannerController.postFood);
 app.get('/planner/booze', passportConf.isAuthenticated, plannerController.getBooze);
