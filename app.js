@@ -158,6 +158,8 @@ app.get('/checkout', passportConf.isAuthenticated, checkoutController.getCheckou
 
 // 
 app.post('/deliverydotcom', homeController.callDeliveryDotCom);
+app.post('/deliverydotcombooze', homeController.callDeliveryDotComBooze);
+app.post('/deliverydotcomitem', homeController.callDeliveryDotComItem);
 
 /**
  * OAuth routes for sign-in.
