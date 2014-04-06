@@ -23,26 +23,27 @@ exports.getDetails = function(req, res) {
 exports.postDetails = function(req, res) {
   User.findById(req.user.id, function(err, user) {
     if (err) return next(err);
-    user.email = req.body.email || '';
-    user.profile.name = req.body.name || '';
-    user.profile.gender = req.body.gender || '';
-    user.profile.location = req.body.location || '';
-    user.profile.website = req.body.website || '';
-
-    user.save(function(err) {
-      if (err) return next(err);
-      req.flash('success', { msg: 'Profile information updated.' });
-      res.redirect('/account');
-    });
+    user.party.title = req.body.partyName;
+    user.party.address = req.body.partyAddress;
+    user.party.date = req.body.partyDate;
   });
   res.json({ success: true });
 };
-
 
 exports.getFood = function(req, res) {
   res.render('planner/food', {
     title: 'Food'
   });
+};
+
+exports.postFood = function(req, res) {
+  User.findById(req.user.id, function(err, user) {
+    if (err) return next(err);
+    user.party.title = req.body.partyName;
+    user.party.address = req.body.partyAddress;
+    user.party.date = req.body.partyDate;
+  });
+  res.json({ success: true });
 };
 
 exports.getBooze = function(req, res) {

@@ -147,7 +147,8 @@ app.get('/planner/details', passportConf.isAuthenticated, plannerController.getD
 app.post('/planner/details', passportConf.isAuthenticated, plannerController.postDetails);
 
 app.get('/planner/food', passportConf.isAuthenticated, plannerController.getFood);
-// app.post('/planner/food', passportConf.isAuthenticated, plannerController.postFood);
+app.post('/planner/food', passportConf.isAuthenticated, plannerController.postFood);
+
 app.get('/planner/booze', passportConf.isAuthenticated, plannerController.getBooze);
 // app.post('/planner/booze', passportConf.isAuthenticated, plannerController.postBooze);
 app.get('/planner/cleaning', passportConf.isAuthenticated, plannerController.getCleaning);
