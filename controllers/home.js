@@ -44,6 +44,7 @@ exports.callDeliveryDotComItem = function(req, res) {
   var deliveryFull = "https://sandbox.delivery.com/merchant/" + req.body.id + "/menu?client_id=YmQ3ZWEzMTljOTdiMzRmMDM1NTQxYTY1MDc1YzU1YjBk";
   request(deliveryFull, function (error, response, body) {
     if (!error && response.statusCode == 200) {
+      console.log(body);
       res.json(body);
     }
   });
