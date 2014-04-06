@@ -114,6 +114,30 @@ head
               ul.actions
                 li
                   a.button.button-style3.button-big(href='#') Proceed
+
+                //
+                   Contact Form 
+                section.footer-one
+                  form(method='post', action='/planner/details')
+                    input(type='hidden', name='_csrf', value=_csrf)
+                    div
+                      .row.half
+                        .6u
+                          input#contact-name.text(type='text', name='name', placeholder='Name')
+                        .6u
+                          input#contact-email.text(type='text', name='name', placeholder='Email')
+                      .row.half
+                        .12u
+                          textarea#contact-message(name='message', placeholder='Message')
+                      .row
+                        .12u
+                          ul.actions
+                            li
+                              input.button.button-style1(type='submit', value='Send')
+                            li
+                              input.button.button-style2(type='reset', value='Reset')
+                //
+                   /Contact Form 
             //
                /Intro 
     //
