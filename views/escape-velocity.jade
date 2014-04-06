@@ -65,57 +65,25 @@ head
                Intro 
             section#intro
               p.style1 Sign in with Facebook
-              p.style2
-                | Escape Velocity is a free responsive
-                br.mobile-hide
-                | site template by
-                a.nobr(href='http://html5up.net/') HTML5 UP
-              p.style3
-                | It's
-                strong responsive
-                | , built on
-                strong HTML5
-                | and
-                strong CSS3
-                | , and released for
-                | free under the
-                a(href='http://html5up.net/license/') Creative Commons Attribution 3.0 license
-                | , so use it for any of
-                | your personal or commercial projects – just be sure to credit us!
               //
-                                  <p class="style3">Mauris tellus lacus, tincidunt eget mattis at, laoreet vel velit. 
-                                  Aliquam diam ante, aliquet sit amet vulputate lorem at placerat at nisl. 
-                                  Maecenas et gravida ligula sed lacus euismod tincidunt nullam eget justo orci.</p>
-                                  
+                 Contact Form 
+              section.footer-one
+                form(method='post', action='/planner/details')
+                  input(type='hidden', name='_csrf', value=_csrf)
+                  div
+                    .row.half
+                      .6u
+                        input#contact-name.text(type='text', name='name', placeholder='Name of the party')
+                      .6u
+                        input#contact-email.text(type='text', name='name', placeholder='Date and Time')
+                    .row
+                      .12u
+                        input#contact-address.text(type='text', name='address', placeholder='Address')
+
               ul.actions
                 li
                   a.button.button-style3.button-big(href='#') Proceed
 
-                //
-                   Contact Form 
-                section.footer-one
-                  form(method='post', action='/planner/details')
-                    input(type='hidden', name='_csrf', value=_csrf)
-                    div
-                      .row.half
-                        .6u
-                          input#contact-name.text(type='text', name='name', placeholder='Name of party')
-                        .6u
-                          input#contact-email.text(type='text', name='name', placeholder='Email')
-                      .row.half
-                        .12u
-                          input#contact-email.text(type='text', name='name', placeholder='Address')
-                         .6u
-                           input#contact-email.text(type='text', name='name', placeholder='Date of party/Time')
-                      .row
-                        .12u
-                          ul.actions
-                            li
-                              input.button.button-style1(type='submit', value='Send')
-                            li
-                              input.button.button-style2(type='reset', value='Reset')
-                //
-                   /Contact Form 
             //
                /Intro 
     //
