@@ -7,6 +7,12 @@ exports.getDetails = function(req, res) {
   });
 };
 
+exports.getCongrats = function(req, res) {
+  res.render('congrats', {
+    title: 'Cleaning'
+  });
+};
+
 exports.postDetails = function(req, res) {
   User.findById(req.user.id, function(err, user) {
     if (err) return next(err);
