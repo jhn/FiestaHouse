@@ -1233,3 +1233,11 @@
 					color: #fff;
 				}
 	
+	#facebookSignIn
+	{
+		font-size:36px;
+		
+  text-decoration:  none;
+  font-weight:      bold;
+		
+	}
