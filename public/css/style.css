@@ -94,6 +94,14 @@
 		font-size: 0.8em;
 	}
 	
+	
+	details
+	{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	
 	table
 	{
 		width: 100%;
@@ -377,6 +385,24 @@
 			{
 				background-color: #1f232b;
 			}
+		.button-style4
+		{
+			background-color: #3b5998;
+			box-shadow: inset 0px 0px 2px 0px #a0a1a7;
+			margin-top:-300px;
+			margin-botton:100px;
+		}
+		
+			.button-style2:hover
+			{
+				box-shadow: inset 0px 0px 2px 0px #606167;
+			}
+		
+			.button-style2:active
+			{
+				box-shadow: inset 0px 0px 2px 0px #202127;
+			}
+				
 
 	ul.style1
 	{
@@ -1051,6 +1077,19 @@
 			background: #e97770 url('images/overlay.png');
 			color: #fff;
 		}
+		
+		.wrapper-style1 .fbButton
+	    {
+			top: 0;
+			left: 50%;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 0.25em;
+			position:absolute;
+			left: +200px;
+			botton: +100px;
+        }
 	
 		.wrapper-style1 h1,
 		.wrapper-style1 h2,
@@ -1092,6 +1131,10 @@
 			border: solid 10px #fff;
 		}
 		
+	.detailsForm{
+		
+	
+	}
 /*********************************************************************************/
 /* Logo                                                                          */
 /*********************************************************************************/
@@ -1189,3 +1232,4 @@
 				{
 					color: #fff;
 				}
+	

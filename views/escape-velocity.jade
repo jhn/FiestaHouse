@@ -32,7 +32,7 @@ head
                  Logo 
               #logo
                 h1
-                  a(href='#') Fiesta House
+                 p Fiesta House
                 span.byline Get your party on
               //
                  /Logo
@@ -40,38 +40,14 @@ head
                  Nav
               nav#nav
                 ul
-                  li.current_page_item
-                    a(href='index.html') Home
                   li
-                    span Dropdown
-                    ul
-                      li
-                        a(href='#') Lorem ipsum
-                      li
-                        a(href='#') Magna veroeros
-                      li
-                        a(href='#') Etiam nisl
-                      li
-                        span Sed consequat
-                        ul
-                          li
-                            a(href='#') Lorem dolor
-                          li
-                            a(href='#') Amet consequat
-                          li
-                            a(href='#') Magna phasellus
-                          li
-                            a(href='#') Etiam nisl
-                          li
-                            a(href='#') Sed feugiat
-                      li
-                        a(href='#') Nisl tempus
+                    a(href='#') Details
                   li
-                    a(href='right-sidebar.html') Details
+                    a(href='right-sidebar.html') Food
                   li
-                    a(href='left-sidebar.html') Food
+                    a(href='left-sidebar.html') Booze
                   li
-                    a(href='no-sidebar.html') Booze
+                    a(href='no-sidebar.html') Clean Up
               //
                  /Nav 
             //
@@ -81,13 +57,14 @@ head
     //
        Intro Wrapper 
     #intro-wrapper.wrapper.wrapper-style1
-      .title Get Started
+      .title Start Here
       .container
         .row
           .12u
             //
                Intro 
             section#intro
+<<<<<<< Updated upstream
               p.style1 Sign in with Facebook
               p.style2
                 | Escape Velocity is a free responsive
@@ -123,12 +100,14 @@ head
                     div
                       .row.half
                         .6u
-                          input#contact-name.text(type='text', name='name', placeholder='Name')
+                          input#contact-name.text(type='text', name='name', placeholder='Name of party')
                         .6u
                           input#contact-email.text(type='text', name='name', placeholder='Email')
                       .row.half
                         .12u
-                          textarea#contact-message(name='message', placeholder='Message')
+                          input#contact-email.text(type='text', name='name', placeholder='Address'')
+	                     .6u
+                           input#contact-email.text(type='text', name='name', placeholder='Date of party/Time')
                       .row
                         .12u
                           ul.actions
@@ -262,84 +241,15 @@ head
     //
        Footer Wrapper 
     #footer-wrapper.wrapper
-      .title The Rest Of It
+      .title We'll Even Clean Up After
       .container
         .row
           .12u
-            //
-               Footer 
-            #footer
-              header.style1
-                h2 Ipsum sapien elementum portitor?
-                p.byline
-                  | Sed turpis tortor, tincidunt sed ornare in metus porttitor mollis nunc in aliquet.
-                  br
-                  | Nam pharetra laoreet imperdiet volutpat etiam consequat feugiat.
-              hr
-              div
-                .row
-                  .6u
-                    //
-                       Contact Form 
-                    section.footer-one
-                      form(method='post', action='#')
-                        div
-                          .row.half
-                            .6u
-                              input#contact-name.text(type='text', name='name', placeholder='Name')
-                            .6u
-                              input#contact-email.text(type='text', name='name', placeholder='Email')
-                          .row.half
-                            .12u
-                              textarea#contact-message(name='message', placeholder='Message')
-                          .row
-                            .12u
-                              ul.actions
-                                li
-                                  input.button.button-style1(type='submit', value='Send')
-                                li
-                                  input.button.button-style2(type='reset', value='Reset')
-                    //
-                       /Contact Form 
-                  .6u
-                    //
-                       Contacts 
-                    section.footer-two
-                      .feature-list.feature-list-small
-                        div
-                          .row
-                            .6u
-                              section
-                                h3.fa.fa-home Mailing Address
-                                p
-                                  | Untitled Corporation
-                                  br
-                                  | 1234 Somewhere Rd #987
-                                  br
-                                  | Nashville, TN 00000-0000
-                            .6u
-                              section
-                                h3.fa.fa-comment Social
-                                p
-                                  a(href='http://twitter.com/n33co') @n33co
-                                  br
-                                  a(href='http://dribbble.com/n33') dribbble.com/n33
-                                  br
-                                  a(href='#') facebook.com/untitled
-                          .row
-                            .6u
-                              section
-                                h3.fa.fa-envelope Email
-                                p
-                                  a(href='#') info@untitled.tld
-                            .6u
-                              section
-                                h3.fa.fa-phone Phone
-                                p
-                                  | (000) 555-0000
-                    //
-                       /Contacts 
-              hr
+            h1 Our cleaners are efficient and trustworthy. Would you like to use this service?		  
+            form(action='')
+              input(type='checkbox', name='cleaningService', value='yes')
+              | Yes I would like the cleaning service
+              br
             //
                /Footer 
             //
@@ -353,4 +263,3 @@ head
                /Copyright 
     //
        /Footer Wrapper 
-
