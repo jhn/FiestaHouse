@@ -4,14 +4,17 @@ $(document).ready(function() {
     // don't submit yet
     e.preventDefault();
     // make call to delivery.com
-
     $.post("/deliverydotcom", $( "#deliveryForm" ).serialize(), function(data) {
       var payload = $.parseJSON(data);
-      var some_merchants = payload.merchants.slice(1,6);
-      $.each(some_merchants, function(k, v) {
-
+      var allMerchants = payload.merchants;
+      var random = Math.floor(getRandomArbitrary(0, allMerchants.length));
+      var singleMerchant = allMerchants[random];
+      $.post("/deliverydotcomitem", { id: singleMerchant.id, _csrf: getCSRFToken()}, function(items) {
+        var itemPayload = $.parseJSON(items);
       });
-      debugger;
+      // $.each(some_merchants, function(k, v) {
+
+      // });
       console.log(payload);
 
     });
@@ -22,6 +25,14 @@ $(document).ready(function() {
 
     scrollToElement('#food');
   });
+
+  function getCSRFToken() {
+    return $('#deliveryForm input')[0].value;
+  }
+
+  function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 
   $('#foodProceed').click(function(e) {
     scrollToElement('#booze');

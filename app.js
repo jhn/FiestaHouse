@@ -165,7 +165,6 @@ app.post('/deliverydotcomitem', homeController.callDeliveryDotComItem);
  * OAuth routes for sign-in.
  */
 
-// TODO: change redirect route
 app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));
 app.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function(req, res) {
   res.redirect('#details');
