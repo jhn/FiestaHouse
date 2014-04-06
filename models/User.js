@@ -6,7 +6,12 @@ var ObjectId = mongoose.Schema.ObjectId;
 var userSchema = new mongoose.Schema({
   email: { type: String, unique: true, lowercase: true },
   password: String,
-  party: ObjectId,
+
+  party: {
+    title: String,
+    address: String,
+    date: String
+  },
 
   facebook: String,
   twitter: String,

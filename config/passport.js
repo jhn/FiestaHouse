@@ -86,6 +86,7 @@ passport.use(new FacebookStrategy(secrets.facebook, function(req, accessToken, r
           done(err);
         } else {
           var user = new User();
+          user.party = { title: '', address: '', date: Date.now }
           user.email = profile._json.email;
           user.facebook = profile.id;
           user.tokens.push({ kind: 'facebook', accessToken: accessToken });

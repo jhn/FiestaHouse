@@ -94,6 +94,7 @@ exports.postSignup = function(req, res, next) {
   var user = new User({
     email: req.body.email,
     password: req.body.password,
+    party: { title: '', address: '', date: '' }
   });
 
   user.save(function(err) {

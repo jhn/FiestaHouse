@@ -2,22 +2,9 @@ var User = require('../models/User');
 var Party = require('../models/Party');
 
 exports.getDetails = function(req, res) {
-
-  if (!req.user.party) {
-    var party = new Party({
-      email: req.user.email,
-      title: '',
-      address: ''
-    });
-    party.save();
-    User.findById(req.user.id, function(err, user) {
-      if (err) return next(err);
-      user.party = party;
-      user.save();
-    });
-  };
-
-  res.json(req.user.party);
+  res.render('planner/cleaning', {
+    title: 'Cleaning'
+  });
 };
 
 exports.postDetails = function(req, res) {
@@ -26,6 +13,8 @@ exports.postDetails = function(req, res) {
     user.party.title = req.body.partyName;
     user.party.address = req.body.partyAddress;
     user.party.date = req.body.partyDate;
+
+    user.save();
   });
   res.json({ success: true });
 };
