@@ -14,6 +14,7 @@ head
     script(src='js/config.js')
     script(src='js/skel.min.js')
     script(src='js/skel-panels.min.js')
+    script(src='js/main.js')
     noscript
       link(rel='stylesheet', href='css/skel-noscript.css')
       link(rel='stylesheet', href='css/style.css')
@@ -65,29 +66,23 @@ head
                Intro 
             section#intro
               p.style1 Sign in with Facebook
-              //
-                 Contact Form 
               section.footer-one
-                form(method='post', action='/planner/details')
+                form#deliveryForm(method='post', action='/planner/details')
                   input(type='hidden', name='_csrf', value=_csrf)
                   div
                     .row.half
                       .6u
-                        input#contact-name.text(type='text', name='name', placeholder='Name of the party')
+                        input#partyName.text(type='text', name='partyName', placeholder='Name of the party')
                       .6u
-                        input#contact-email.text(type='text', name='name', placeholder='Date and Time')
+                        input#partyDate.text(type='text', name='partyDate', placeholder='Date and Time')
                     .row
                       .12u
-                        input#contact-address.text(type='text', name='address', placeholder='Address')
+                        input#contact-address.text(type='text', name='partyAddress', placeholder='Address')
 
-              ul.actions
-                li
-                  a.button.button-style3.button-big(href='#') Proceed
+                  ul.actions
+                    li
+                      button#withDelivery.button.button-style3.button-big(href='#') Proceed
 
-            //
-               /Intro 
-    //
-       /Intro Wrapper 
     //
        Main Wrapper 
     .wrapper.wrapper-style2

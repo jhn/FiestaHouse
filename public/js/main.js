@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
-  // Place JavaScript code here...
-
+  $('#deliveryForm').submit(function (e) {
+    e.preventDefault();
+  });
 });
